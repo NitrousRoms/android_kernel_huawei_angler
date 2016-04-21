@@ -83,6 +83,13 @@ config LOCALVERSION_AUTO
 
 	  which is done within the script "scripts/setlocalversion".)
 
+config n2o_EXTRAVERSION
+	bool "n2o Kernel Name"
+	default n
+	help
+	  Enabling this option will add "_n2o_x.x" to the localversion.
+	  This should only be enabled for devices that uses tipsy kernel changes.
+
 config HAVE_KERNEL_GZIP
 	bool
 

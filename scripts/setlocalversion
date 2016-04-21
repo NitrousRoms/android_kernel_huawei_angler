@@ -184,7 +184,11 @@ else
 	# LOCALVERSION= is not specified
 	if test "${LOCALVERSION+set}" != "set"; then
 		scm=$(scm_version --short)
-		res="$res${scm:++}"
+		if test "$CONFIG_n2o_EXTRAVERSION" = "y"; then
+		res="_n2o_v1.0"
+		else
+		res="$res"
+		fi
 	fi
 fi
 
